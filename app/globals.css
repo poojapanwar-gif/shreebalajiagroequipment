@@ -1,0 +1,34 @@
+/* Local Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap");
+@font-face {
+  font-family: "Frisbee";
+  src: url("/fonts/Frisbee-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Brother 1816";
+  src: url("/fonts/Brother1816-Regular.ttf") format("woff2"),
+       url("/fonts/Brother1816-Regular.ttf") format("woff");
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Brother 1816", "Frisbee", "Maven Pro", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  /* background-color: #E5DDC0; */
+}
+
+/* Mobile fix */
+@media (min-width: 320px) and (max-width: 435px) {
+  * {
+    max-width: 100%;
+  }
+}

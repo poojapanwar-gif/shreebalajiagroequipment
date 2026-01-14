@@ -1,0 +1,357 @@
+$deep-green: #0f2c22;
+$forest-green: #1a4a32;
+$leaf-green: #4f9d3a;
+$gold: #f7c35f;
+$gold-dark: #e2a13a;
+$cream: #fef3dd;
+$dark: #0b1a13;
+
+.header-section-container {
+  width: 100%;
+  position: fixed;
+  height: 88px;
+  padding: 0px 80px;
+  display: flex;
+  align-items: center;
+  top: 0px;
+  background: rgba(15, 44, 34, 0.92);
+  z-index: 3000;
+  transition: background 0.3s ease, box-shadow 0.3s ease,
+  backdrop-filter 0.3s ease;
+  .header-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    .header-logo-div {
+      display: flex;
+      align-items: center;
+      .header-logo-image {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        .brand-name {
+          font-family: "Frisbee", "Brother 1816", "Maven Pro", sans-serif;
+          font-weight: 700;
+          font-size: 24px;
+          letter-spacing: 0.08em;
+          color: $gold;
+          text-transform: uppercase;
+        }
+        .brand-tagline {
+          font-family: "Maven Pro", sans-serif;
+          font-weight: 500;
+          font-size: 11px;
+          letter-spacing: 0.2em;
+          color: $cream;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .header-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        h6 {
+          font-family: "Maven Pro", sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.18em;
+          margin: 0px;
+          color: $cream;
+          text-transform: uppercase;
+          transition: color 0.2s ease;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -6px;
+          width: 0%;
+          height: 2px;
+          background: $gold;
+          transition: width 0.2s ease;
+        }
+        &:hover {
+          h6 {
+            color: $gold;
+          }
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .button-menu-icon {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      button {
+        width: 160px;
+        height: 42px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, $gold 0%, $gold-dark 100%);
+        font-family: "Brother 1816", "Maven Pro", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: $dark;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 10px 24px rgba(247, 195, 95, 0.35);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 28px rgba(247, 195, 95, 0.45);
+      }
+      .menu-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(247, 195, 95, 0.35);
+        color: $cream;
+        cursor: pointer;
+        transition: background 0.2s ease, border-color 0.2s ease,
+          transform 0.2s ease;
+        svg {
+          display: block;
+        }
+      }
+      .menu-icon:hover {
+        background: rgba(247, 195, 95, 0.2);
+        border-color: rgba(247, 195, 95, 0.6);
+        transform: translateY(-1px);
+      }
+    }
+  }
+}
+
+.header-section-container:hover {
+  background: rgba(15, 44, 34, 0.92);
+}
+
+.scrolled {
+  background: rgba(15, 44, 34, 0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.header-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 14, 10, 0.72);
+  backdrop-filter: blur(6px);
+  z-index: 4000;
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeIn 0.2s ease;
+}
+
+.header-menu-panel {
+  width: min(360px, 85vw);
+  height: 100%;
+  background: $deep-green;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: -12px 0 30px rgba(0, 0, 0, 0.35);
+  animation: slideIn 0.25s ease;
+}
+
+.header-menu-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.menu-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  .menu-brand-name {
+    font-family: "Frisbee", "Brother 1816", "Maven Pro", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    color: $gold;
+    text-transform: uppercase;
+  }
+  .menu-brand-tagline {
+    font-family: "Maven Pro", sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: $cream;
+    text-transform: uppercase;
+  }
+}
+
+.menu-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid rgba(247, 195, 95, 0.35);
+  background: transparent;
+  color: $cream;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.menu-close:hover {
+  background: rgba(247, 195, 95, 0.2);
+  border-color: rgba(247, 195, 95, 0.55);
+}
+
+.header-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  a {
+    text-decoration: none;
+    font-family: "Maven Pro", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $cream;
+    transition: color 0.2s ease;
+  }
+  a:hover {
+    color: $gold;
+  }
+}
+
+.header-menu-cta {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  button {
+    width: 100%;
+    height: 44px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, $gold 0%, $gold-dark 100%);
+    font-family: "Brother 1816", "Maven Pro", sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $dark;
+    border: none;
+    cursor: pointer;
+  }
+  .header-menu-note {
+    margin: 0px;
+    font-family: "Maven Pro", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(254, 243, 221, 0.8);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1280px) {
+  .header-section-container {
+    padding: 0px 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-section-container {
+    height: 78px;
+    padding: 0px 24px;
+    .header-content {
+      .header-logo-div {
+        .header-logo-image {
+          .brand-name {
+            font-size: 20px;
+          }
+          .brand-tagline {
+            font-size: 10px;
+            letter-spacing: 0.16em;
+          }
+        }
+      }
+      .header-nav-links {
+        display: none;
+      }
+      .button-menu-icon {
+        button {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .header-section-container {
+    height: 72px;
+    padding: 0px 18px;
+    .header-content {
+      gap: 16px;
+      .header-logo-div {
+        .header-logo-image {
+          .brand-name {
+            font-size: 18px;
+          }
+          .brand-tagline {
+            font-size: 9px;
+            letter-spacing: 0.14em;
+          }
+        }
+      }
+      .button-menu-icon {
+        .menu-icon {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+  .header-menu-panel {
+    width: 100%;
+    padding: 28px 22px;
+  }
+}

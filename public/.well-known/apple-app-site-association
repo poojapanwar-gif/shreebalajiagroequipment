@@ -1,0 +1,21 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "2TZTM2B4D8.com.modx.computer",
+        "paths": [
+          "/product/*",
+          "/user/*",
+          "/share/*",
+          "NOT /admin/*"
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "2TZTM2B4D8.com.modx.computer"
+    ]
+  }
+}

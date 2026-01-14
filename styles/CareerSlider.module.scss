@@ -1,0 +1,159 @@
+.curvedCarouselSection {
+  position: relative;
+  width: 100%;
+  height: 45vh;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E5DDC0;
+  overflow: hidden;
+}
+
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+.ellipseMask {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 200px;
+  background-color: #E5DDC0;
+  border-radius: 50%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.ellipseTop {
+  top: 0;
+  // transform: translateX(-50%) translateY(-50%);
+}
+
+.ellipseBottom {
+  bottom: 0;
+  // transform: translateX(-50%) translateY(50%);
+}
+
+.carouselViewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  left: 50%;
+  will-change: transform;
+}
+
+.carouselCard {
+  flex-shrink: 0;
+  width: 295.82px;
+  height: 386px;
+  border-radius: 11px;
+  overflow: hidden;
+  //box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  background: white;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .curvedCarouselSection {
+    height: 40vh;
+    min-height: 320px;
+  }
+
+  .carouselContainer {
+    height: 520px;
+  }
+
+  .carouselCard {
+    width: 255px;
+    height: 330px;
+  }
+}
+
+@media (max-width: 768px) {
+  .curvedCarouselSection {
+    margin-top: 70px;
+    height: 360px;
+  }
+
+  .carouselContainer {
+    height: 420px;
+  }
+
+  .ellipseMask {
+    width: 150%;
+    height: 150px;
+  }
+
+  .ellipseTop {
+    top: -40px;
+  }
+
+  .ellipseBottom {
+    bottom: -40px;
+  }
+
+  .carouselTrack {
+    gap: 16px;
+  }
+
+  .carouselCard {
+    width: 230px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .curvedCarouselSection {
+    height: 320px;
+  }
+
+  .carouselContainer {
+    height: 360px;
+  }
+
+  .ellipseMask {
+    width: 170%;
+    height: 120px;
+  }
+
+  .ellipseTop {
+    top: -30px;
+  }
+
+  .ellipseBottom {
+    bottom: -30px;
+  }
+
+  .carouselTrack {
+    gap: 12px;
+  }
+
+  .carouselCard {
+    width: 210px;
+    height: 270px;
+  }
+}
