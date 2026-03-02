@@ -8,7 +8,7 @@ $dark: #0b1a13;
 
 .aboutSection {
   position: relative;
-  padding: 80px;
+  padding: 40px 80px;
   background-color: #E5DDC0;
   overflow: hidden;
 }
@@ -168,7 +168,7 @@ $dark: #0b1a13;
 
 @media (max-width: 1024px) {
   .aboutSection {
-    padding:  50px;
+    padding: 40px 80px;
   }
 
   .aboutInner {
