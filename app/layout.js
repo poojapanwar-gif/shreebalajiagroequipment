@@ -2,6 +2,7 @@
 import "../app/globals.css";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import WhatsAppFloat from "@/components/layout/WhatsAppFloat";
 export const metadata = {
   title: "Shree Balaji Agro | Agricultural Equipment Manufacturer Since 1975",
   description:
@@ -19,10 +20,14 @@ export default function RootLayout({ children }) {
                <Header />
      
                {children}
-     
+
+               <WhatsAppFloat />
+
                <Footer />
            </body>
     </html>
   );
 }
+
+
 
