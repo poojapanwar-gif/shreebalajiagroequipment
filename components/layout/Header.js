@@ -8,7 +8,7 @@ const Header = () => {
   const headerLinks = [
     { href: "/", label: "Home" },
     { href: "/about-us", label: "About Us" },
-    { href: "/about-us", label: "Our Story" },
+    { href: "/our-story", label: "Our Story" },
     { href: "/gallery", label: "Products" },
     { href: "/blog", label: "Blog" },
   ];
